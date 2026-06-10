@@ -16,7 +16,7 @@ const fs = require('fs');
 // Reuse yodaman's existing gitService
 let gitService;
 try {
-  gitService = require(path.join(__dirname, '..', '..', 'backend', 'services', 'gitService'));
+  gitService = require(path.join(__dirname, '..', 'backend', 'services', 'gitService'));
 } catch {
   // Fallback: try relative to cwd (works when running from yodaman root)
   try { gitService = require(path.join(process.cwd(), 'backend', 'services', 'gitService')); }
