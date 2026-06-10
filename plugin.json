@@ -1,0 +1,29 @@
+{
+  "name": "lightsaber",
+  "displayName": "Lightsaber — Git Health Map",
+  "description": "Find hotspots in your codebase using Git history, complexity, and change coupling. Your commit history reveals where your code actually hurts.",
+  "version": "1.0.0",
+  "author": "YodaMan Community",
+  "minYodaManVersion": "1.0.0",
+  "entry": "main.js",
+  "permissions": ["git:read", "filesystem:read", "audit:write"],
+  "uiExtensions": [
+    {
+      "target": "plugins-tab",
+      "label": "Lightsaber",
+      "icon": "assets/lightsaber-icon.svg",
+      "component": "frontend/HealthDashboard.jsx"
+    }
+  ],
+  "configSchema": {
+    "hotspotThreshold": { "type": "number", "default": 40, "description": "Files with health score below this are hotspots" },
+    "commitLimit": { "type": "number", "default": 500, "description": "Number of recent commits to analyze" },
+    "daysToAnalyze": { "type": "number", "default": 90, "description": "Time window for change frequency analysis" },
+    "enablePulseAnimation": { "type": "boolean", "default": true, "description": "Animate critical hotspots" },
+    "excludePatterns": {
+      "type": "array",
+      "default": ["node_modules/**", "dist/**", "build/**", "*.lock", "package-lock.json"],
+      "description": "Glob patterns to exclude from analysis"
+    }
+  }
+}
