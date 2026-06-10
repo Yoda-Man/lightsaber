@@ -1,0 +1,12 @@
+{
+  "state": "partial",
+  "updatedAt": "2026-06-10T14:17:31.165Z",
+  "message": "Graphify graph built with skipped visualizations",
+  "startedAt": "2026-06-10T14:17:30.788Z",
+  "completedAt": "2026-06-10T14:17:31.165Z",
+  "durationMs": 377,
+  "output": "Re-extracting code files in /Users/marwamutemasango/Documents/lightsaber (no LLM needed)...\n[graphify watch] Rebuilt: 118 nodes, 116 edges, 13 communities\n[graphify watch] graph.json, graph.html and GRAPH_REPORT.md updated in /Users/marwamutemasango/Documents/lightsaber/graphify-out\nCode graph updated. For doc/paper/image changes run /graphify --update in your AI assistant.\nTip: set GEMINI_API_KEY or GOOGLE_API_KEY to use Gemini for semantic extraction.",
+  "skippedArtifacts": {},
+  "nodeCount": 118,
+  "edgeCount": 116
+}
