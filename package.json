@@ -1,9 +1,9 @@
 {
   "name": "lightsaber",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Git Health Map for YodaMan — finds code hotspots using Git history, complexity, and change coupling analysis",
   "main": "lightsaber.js",
-  "author": "YodaMan Community",
+  "author": "Marwa Trust Mutemasango <trustaldo@gmail.com>",
   "license": "MIT",
   "keywords": ["yodaman", "plugin", "git", "code-health", "hotspots", "technical-debt"],
   "repository": { "type": "git", "url": "https://github.com/Yoda-Man/lightsaber.git" },
