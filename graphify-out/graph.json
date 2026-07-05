@@ -4,6 +4,51 @@
   "graph": {},
   "nodes": [
     {
+      "label": "CodeTrooper.js",
+      "file_type": "code",
+      "source_file": "CodeTrooper.js",
+      "source_location": "L1",
+      "id": "codetrooper_js",
+      "community": 9,
+      "norm_label": "codetrooper.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "CodeTrooper.js",
+      "source_location": "L4",
+      "id": "lightsaber_codetrooper_fs",
+      "community": 9,
+      "norm_label": "fs"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "CodeTrooper.js",
+      "source_location": "L5",
+      "id": "lightsaber_codetrooper_path",
+      "community": 9,
+      "norm_label": "path"
+    },
+    {
+      "label": "EXT_LANG",
+      "file_type": "code",
+      "source_file": "CodeTrooper.js",
+      "source_location": "L7",
+      "id": "lightsaber_codetrooper_ext_lang",
+      "community": 9,
+      "norm_label": "ext_lang"
+    },
+    {
+      "label": "execute()",
+      "file_type": "code",
+      "source_file": "CodeTrooper.js",
+      "source_location": "L22",
+      "id": "lightsaber_codetrooper_execute",
+      "community": 9,
+      "norm_label": "execute()"
+    },
+    {
       "label": "find-unused.js",
       "file_type": "code",
       "source_file": "find-unused.js",
@@ -279,7 +324,7 @@
       "source_file": "plugin.json",
       "source_location": "L21",
       "id": "lightsaber_plugin_configschema_daystoanalyze",
-      "community": 12,
+      "community": 0,
       "norm_label": "daystoanalyze"
     },
     {
@@ -288,7 +333,7 @@
       "source_file": "plugin.json",
       "source_location": "L21",
       "id": "lightsaber_plugin_daystoanalyze_type",
-      "community": 12,
+      "community": 0,
       "norm_label": "type"
     },
     {
@@ -297,7 +342,7 @@
       "source_file": "plugin.json",
       "source_location": "L21",
       "id": "lightsaber_plugin_daystoanalyze_default",
-      "community": 12,
+      "community": 0,
       "norm_label": "default"
     },
     {
@@ -306,7 +351,7 @@
       "source_file": "plugin.json",
       "source_location": "L21",
       "id": "lightsaber_plugin_daystoanalyze_description",
-      "community": 12,
+      "community": 0,
       "norm_label": "description"
     },
     {
@@ -562,6 +607,42 @@
       "norm_label": "type"
     },
     {
+      "label": "Droid-Sweep.js",
+      "file_type": "code",
+      "source_file": "Droid-Sweep.js",
+      "source_location": "L1",
+      "id": "droid_sweep_js",
+      "community": 12,
+      "norm_label": "droid-sweep.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "Droid-Sweep.js",
+      "source_location": "L5",
+      "id": "lightsaber_droid_sweep_fs",
+      "community": 12,
+      "norm_label": "fs"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "Droid-Sweep.js",
+      "source_location": "L6",
+      "id": "lightsaber_droid_sweep_path",
+      "community": 12,
+      "norm_label": "path"
+    },
+    {
+      "label": "execute()",
+      "file_type": "code",
+      "source_file": "Droid-Sweep.js",
+      "source_location": "L17",
+      "id": "lightsaber_droid_sweep_execute",
+      "community": 12,
+      "norm_label": "execute()"
+    },
+    {
       "label": "FileDetailPanel.jsx",
       "file_type": "code",
       "source_file": "frontend/FileDetailPanel.jsx",
@@ -639,7 +720,7 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L1",
       "id": "backend_complexitycalculator_js",
-      "community": 9,
+      "community": 3,
       "norm_label": "complexitycalculator.js"
     },
     {
@@ -648,7 +729,7 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L3",
       "id": "backend_complexitycalculator_path",
-      "community": 9,
+      "community": 3,
       "norm_label": "path"
     },
     {
@@ -657,7 +738,7 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L5",
       "id": "backend_complexitycalculator_complexitycalculator",
-      "community": 9,
+      "community": 3,
       "norm_label": "complexitycalculator"
     },
     {
@@ -666,7 +747,7 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L6",
       "id": "backend_complexitycalculator_complexitycalculator_constructor",
-      "community": 9,
+      "community": 3,
       "norm_label": ".constructor()"
     },
     {
@@ -675,7 +756,7 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L8",
       "id": "backend_complexitycalculator_complexitycalculator_calculateforfile",
-      "community": 9,
+      "community": 3,
       "norm_label": ".calculateforfile()"
     },
     {
@@ -684,7 +765,7 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L26",
       "id": "backend_complexitycalculator_complexitycalculator_calculateforfiles",
-      "community": 9,
+      "community": 3,
       "norm_label": ".calculateforfiles()"
     },
     {
@@ -1070,12 +1151,52 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "CodeTrooper.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "codetrooper_js",
+      "target": "lightsaber_codetrooper_fs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CodeTrooper.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "codetrooper_js",
+      "target": "lightsaber_codetrooper_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CodeTrooper.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "codetrooper_js",
+      "target": "lightsaber_codetrooper_ext_lang",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CodeTrooper.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "codetrooper_js",
+      "target": "lightsaber_codetrooper_execute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "find-unused.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "find_unused_js",
-      "target": "lightsaber_find_unused_fs",
-      "confidence_score": 1.0
+      "target": "lightsaber_find_unused_fs"
     },
     {
       "relation": "contains",
@@ -1083,9 +1204,9 @@
       "source_file": "find-unused.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "find_unused_js",
-      "target": "lightsaber_find_unused_path",
-      "confidence_score": 1.0
+      "target": "lightsaber_find_unused_path"
     },
     {
       "relation": "contains",
@@ -1093,9 +1214,9 @@
       "source_file": "find-unused.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "find_unused_js",
-      "target": "lightsaber_find_unused_execute",
-      "confidence_score": 1.0
+      "target": "lightsaber_find_unused_execute"
     },
     {
       "relation": "contains",
@@ -1103,9 +1224,9 @@
       "source_file": "lightsaber.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_js",
-      "target": "lightsaber_lightsaber_path",
-      "confidence_score": 1.0
+      "target": "lightsaber_lightsaber_path"
     },
     {
       "relation": "contains",
@@ -1113,9 +1234,9 @@
       "source_file": "lightsaber.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_js",
-      "target": "lightsaber_lightsaber_fs",
-      "confidence_score": 1.0
+      "target": "lightsaber_lightsaber_fs"
     },
     {
       "relation": "contains",
@@ -1123,9 +1244,9 @@
       "source_file": "lightsaber.js",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_js",
-      "target": "lightsaber_lightsaber_healthscore",
-      "confidence_score": 1.0
+      "target": "lightsaber_lightsaber_healthscore"
     },
     {
       "relation": "contains",
@@ -1133,9 +1254,9 @@
       "source_file": "lightsaber.js",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_js",
-      "target": "lightsaber_lightsaber_calccomplexity",
-      "confidence_score": 1.0
+      "target": "lightsaber_lightsaber_calccomplexity"
     },
     {
       "relation": "contains",
@@ -1143,9 +1264,9 @@
       "source_file": "lightsaber.js",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_js",
-      "target": "lightsaber_lightsaber_calccouplingclusters",
-      "confidence_score": 1.0
+      "target": "lightsaber_lightsaber_calccouplingclusters"
     },
     {
       "relation": "contains",
@@ -1153,9 +1274,9 @@
       "source_file": "lightsaber.js",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_js",
-      "target": "lightsaber_lightsaber_execute",
-      "confidence_score": 1.0
+      "target": "lightsaber_lightsaber_execute"
     },
     {
       "relation": "calls",
@@ -1164,9 +1285,9 @@
       "source_file": "lightsaber.js",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_lightsaber_execute",
-      "target": "lightsaber_lightsaber_healthscore",
-      "confidence_score": 1.0
+      "target": "lightsaber_lightsaber_healthscore"
     },
     {
       "relation": "calls",
@@ -1175,9 +1296,9 @@
       "source_file": "lightsaber.js",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_lightsaber_execute",
-      "target": "lightsaber_lightsaber_calccomplexity",
-      "confidence_score": 1.0
+      "target": "lightsaber_lightsaber_calccomplexity"
     },
     {
       "relation": "calls",
@@ -1186,9 +1307,9 @@
       "source_file": "lightsaber.js",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_lightsaber_execute",
-      "target": "lightsaber_lightsaber_calccouplingclusters",
-      "confidence_score": 1.0
+      "target": "lightsaber_lightsaber_calccouplingclusters"
     },
     {
       "relation": "contains",
@@ -1196,9 +1317,9 @@
       "source_file": "plugin.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugin_json",
-      "target": "lightsaber_plugin_name",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_name"
     },
     {
       "relation": "contains",
@@ -1206,9 +1327,9 @@
       "source_file": "plugin.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugin_json",
-      "target": "lightsaber_plugin_displayname",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_displayname"
     },
     {
       "relation": "contains",
@@ -1216,9 +1337,9 @@
       "source_file": "plugin.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugin_json",
-      "target": "lightsaber_plugin_description",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_description"
     },
     {
       "relation": "contains",
@@ -1226,9 +1347,9 @@
       "source_file": "plugin.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugin_json",
-      "target": "lightsaber_plugin_version",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_version"
     },
     {
       "relation": "contains",
@@ -1236,9 +1357,9 @@
       "source_file": "plugin.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugin_json",
-      "target": "lightsaber_plugin_author",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_author"
     },
     {
       "relation": "contains",
@@ -1246,9 +1367,9 @@
       "source_file": "plugin.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugin_json",
-      "target": "lightsaber_plugin_minyodamanversion",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_minyodamanversion"
     },
     {
       "relation": "contains",
@@ -1256,9 +1377,9 @@
       "source_file": "plugin.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugin_json",
-      "target": "lightsaber_plugin_entry",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_entry"
     },
     {
       "relation": "contains",
@@ -1266,9 +1387,9 @@
       "source_file": "plugin.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugin_json",
-      "target": "lightsaber_plugin_permissions",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_permissions"
     },
     {
       "relation": "contains",
@@ -1276,9 +1397,9 @@
       "source_file": "plugin.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugin_json",
-      "target": "lightsaber_plugin_uiextensions",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_uiextensions"
     },
     {
       "relation": "contains",
@@ -1286,9 +1407,9 @@
       "source_file": "plugin.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "plugin_json",
-      "target": "lightsaber_plugin_configschema",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_configschema"
     },
     {
       "relation": "contains",
@@ -1296,9 +1417,9 @@
       "source_file": "plugin.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema",
-      "target": "lightsaber_plugin_configschema_hotspotthreshold",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_configschema_hotspotthreshold"
     },
     {
       "relation": "contains",
@@ -1306,9 +1427,9 @@
       "source_file": "plugin.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema",
-      "target": "lightsaber_plugin_configschema_commitlimit",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_configschema_commitlimit"
     },
     {
       "relation": "contains",
@@ -1316,9 +1437,9 @@
       "source_file": "plugin.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema",
-      "target": "lightsaber_plugin_configschema_daystoanalyze",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_configschema_daystoanalyze"
     },
     {
       "relation": "contains",
@@ -1326,9 +1447,9 @@
       "source_file": "plugin.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema",
-      "target": "lightsaber_plugin_configschema_enablepulseanimation",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_configschema_enablepulseanimation"
     },
     {
       "relation": "contains",
@@ -1336,9 +1457,9 @@
       "source_file": "plugin.json",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema",
-      "target": "lightsaber_plugin_configschema_excludepatterns",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_configschema_excludepatterns"
     },
     {
       "relation": "contains",
@@ -1346,9 +1467,9 @@
       "source_file": "plugin.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_hotspotthreshold",
-      "target": "lightsaber_plugin_hotspotthreshold_type",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_hotspotthreshold_type"
     },
     {
       "relation": "contains",
@@ -1356,9 +1477,9 @@
       "source_file": "plugin.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_hotspotthreshold",
-      "target": "lightsaber_plugin_hotspotthreshold_default",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_hotspotthreshold_default"
     },
     {
       "relation": "contains",
@@ -1366,9 +1487,9 @@
       "source_file": "plugin.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_hotspotthreshold",
-      "target": "lightsaber_plugin_hotspotthreshold_description",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_hotspotthreshold_description"
     },
     {
       "relation": "contains",
@@ -1376,9 +1497,9 @@
       "source_file": "plugin.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_commitlimit",
-      "target": "lightsaber_plugin_commitlimit_type",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_commitlimit_type"
     },
     {
       "relation": "contains",
@@ -1386,9 +1507,9 @@
       "source_file": "plugin.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_commitlimit",
-      "target": "lightsaber_plugin_commitlimit_default",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_commitlimit_default"
     },
     {
       "relation": "contains",
@@ -1396,9 +1517,9 @@
       "source_file": "plugin.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_commitlimit",
-      "target": "lightsaber_plugin_commitlimit_description",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_commitlimit_description"
     },
     {
       "relation": "contains",
@@ -1406,9 +1527,9 @@
       "source_file": "plugin.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_daystoanalyze",
-      "target": "lightsaber_plugin_daystoanalyze_type",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_daystoanalyze_type"
     },
     {
       "relation": "contains",
@@ -1416,9 +1537,9 @@
       "source_file": "plugin.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_daystoanalyze",
-      "target": "lightsaber_plugin_daystoanalyze_default",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_daystoanalyze_default"
     },
     {
       "relation": "contains",
@@ -1426,9 +1547,9 @@
       "source_file": "plugin.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_daystoanalyze",
-      "target": "lightsaber_plugin_daystoanalyze_description",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_daystoanalyze_description"
     },
     {
       "relation": "contains",
@@ -1436,9 +1557,9 @@
       "source_file": "plugin.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_enablepulseanimation",
-      "target": "lightsaber_plugin_enablepulseanimation_type",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_enablepulseanimation_type"
     },
     {
       "relation": "contains",
@@ -1446,9 +1567,9 @@
       "source_file": "plugin.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_enablepulseanimation",
-      "target": "lightsaber_plugin_enablepulseanimation_default",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_enablepulseanimation_default"
     },
     {
       "relation": "contains",
@@ -1456,9 +1577,9 @@
       "source_file": "plugin.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_enablepulseanimation",
-      "target": "lightsaber_plugin_enablepulseanimation_description",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_enablepulseanimation_description"
     },
     {
       "relation": "contains",
@@ -1466,9 +1587,9 @@
       "source_file": "plugin.json",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_excludepatterns",
-      "target": "lightsaber_plugin_excludepatterns_type",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_excludepatterns_type"
     },
     {
       "relation": "contains",
@@ -1476,9 +1597,9 @@
       "source_file": "plugin.json",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_excludepatterns",
-      "target": "lightsaber_plugin_excludepatterns_default",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_excludepatterns_default"
     },
     {
       "relation": "contains",
@@ -1486,9 +1607,9 @@
       "source_file": "plugin.json",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_plugin_configschema_excludepatterns",
-      "target": "lightsaber_plugin_excludepatterns_description",
-      "confidence_score": 1.0
+      "target": "lightsaber_plugin_excludepatterns_description"
     },
     {
       "relation": "contains",
@@ -1496,9 +1617,9 @@
       "source_file": "main.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_js",
-      "target": "lightsaber_main_path",
-      "confidence_score": 1.0
+      "target": "lightsaber_main_path"
     },
     {
       "relation": "contains",
@@ -1506,9 +1627,9 @@
       "source_file": "main.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_js",
-      "target": "lightsaber_main_onload",
-      "confidence_score": 1.0
+      "target": "lightsaber_main_onload"
     },
     {
       "relation": "contains",
@@ -1516,9 +1637,9 @@
       "source_file": "main.js",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_js",
-      "target": "lightsaber_main_onenable",
-      "confidence_score": 1.0
+      "target": "lightsaber_main_onenable"
     },
     {
       "relation": "contains",
@@ -1526,9 +1647,9 @@
       "source_file": "main.js",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_js",
-      "target": "lightsaber_main_ondisable",
-      "confidence_score": 1.0
+      "target": "lightsaber_main_ondisable"
     },
     {
       "relation": "contains",
@@ -1536,9 +1657,9 @@
       "source_file": "main.js",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_js",
-      "target": "lightsaber_main_onunload",
-      "confidence_score": 1.0
+      "target": "lightsaber_main_onunload"
     },
     {
       "relation": "calls",
@@ -1557,9 +1678,9 @@
       "source_file": "package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "lightsaber_package_name",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_name"
     },
     {
       "relation": "contains",
@@ -1567,9 +1688,9 @@
       "source_file": "package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "lightsaber_package_version",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_version"
     },
     {
       "relation": "contains",
@@ -1577,9 +1698,9 @@
       "source_file": "package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "lightsaber_package_description",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_description"
     },
     {
       "relation": "contains",
@@ -1587,9 +1708,9 @@
       "source_file": "package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "lightsaber_package_main",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_main"
     },
     {
       "relation": "contains",
@@ -1597,9 +1718,9 @@
       "source_file": "package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "lightsaber_package_author",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_author"
     },
     {
       "relation": "contains",
@@ -1607,9 +1728,9 @@
       "source_file": "package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "lightsaber_package_license",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_license"
     },
     {
       "relation": "contains",
@@ -1617,9 +1738,9 @@
       "source_file": "package.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "lightsaber_package_keywords",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_keywords"
     },
     {
       "relation": "contains",
@@ -1627,9 +1748,9 @@
       "source_file": "package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "lightsaber_package_repository",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_repository"
     },
     {
       "relation": "contains",
@@ -1637,9 +1758,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "lightsaber_package_yodaman",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_yodaman"
     },
     {
       "relation": "contains",
@@ -1647,9 +1768,9 @@
       "source_file": "package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_package_repository",
-      "target": "lightsaber_package_repository_type",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_repository_type"
     },
     {
       "relation": "contains",
@@ -1657,9 +1778,9 @@
       "source_file": "package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_package_repository",
-      "target": "lightsaber_package_repository_url",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_repository_url"
     },
     {
       "relation": "contains",
@@ -1667,9 +1788,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_package_yodaman",
-      "target": "lightsaber_package_yodaman_minversion",
-      "confidence_score": 1.0
+      "target": "lightsaber_package_yodaman_minversion"
     },
     {
       "relation": "contains",
@@ -1677,8 +1798,38 @@
       "source_file": "package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_package_yodaman",
-      "target": "lightsaber_package_yodaman_type",
+      "target": "lightsaber_package_yodaman_type"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Droid-Sweep.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "droid_sweep_js",
+      "target": "lightsaber_droid_sweep_fs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Droid-Sweep.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "droid_sweep_js",
+      "target": "lightsaber_droid_sweep_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Droid-Sweep.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "droid_sweep_js",
+      "target": "lightsaber_droid_sweep_execute",
       "confidence_score": 1.0
     },
     {
@@ -1687,9 +1838,9 @@
       "source_file": "frontend/FileDetailPanel.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_filedetailpanel_jsx",
-      "target": "frontend_filedetailpanel_filedetailpanel",
-      "confidence_score": 1.0
+      "target": "frontend_filedetailpanel_filedetailpanel"
     },
     {
       "relation": "imports_from",
@@ -1698,9 +1849,9 @@
       "source_file": "frontend/HealthDashboard.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_healthdashboard_jsx",
-      "target": "frontend_filedetailpanel_jsx",
-      "confidence_score": 1.0
+      "target": "frontend_filedetailpanel_jsx"
     },
     {
       "relation": "contains",
@@ -1708,9 +1859,9 @@
       "source_file": "frontend/ForceGraph.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_forcegraph_jsx",
-      "target": "frontend_forcegraph_forcegraph",
-      "confidence_score": 1.0
+      "target": "frontend_forcegraph_forcegraph"
     },
     {
       "relation": "imports_from",
@@ -1719,9 +1870,9 @@
       "source_file": "frontend/HealthDashboard.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_healthdashboard_jsx",
-      "target": "frontend_forcegraph_jsx",
-      "confidence_score": 1.0
+      "target": "frontend_forcegraph_jsx"
     },
     {
       "relation": "imports_from",
@@ -1730,9 +1881,9 @@
       "source_file": "frontend/HealthDashboard.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_healthdashboard_jsx",
-      "target": "frontend_healthchecks_jsx",
-      "confidence_score": 1.0
+      "target": "frontend_healthchecks_jsx"
     },
     {
       "relation": "contains",
@@ -1740,9 +1891,9 @@
       "source_file": "frontend/HealthDashboard.jsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_healthdashboard_jsx",
-      "target": "frontend_healthdashboard_healthdashboard",
-      "confidence_score": 1.0
+      "target": "frontend_healthdashboard_healthdashboard"
     },
     {
       "relation": "contains",
@@ -1750,9 +1901,9 @@
       "source_file": "frontend/HealthChecks.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_healthchecks_jsx",
-      "target": "frontend_healthchecks_healthchecks",
-      "confidence_score": 1.0
+      "target": "frontend_healthchecks_healthchecks"
     },
     {
       "relation": "contains",
@@ -1760,9 +1911,9 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_complexitycalculator_js",
-      "target": "backend_complexitycalculator_path",
-      "confidence_score": 1.0
+      "target": "backend_complexitycalculator_path"
     },
     {
       "relation": "contains",
@@ -1770,9 +1921,9 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_complexitycalculator_js",
-      "target": "backend_complexitycalculator_complexitycalculator",
-      "confidence_score": 1.0
+      "target": "backend_complexitycalculator_complexitycalculator"
     },
     {
       "relation": "imports_from",
@@ -1781,9 +1932,9 @@
       "source_file": "backend/routes.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_routes_js",
-      "target": "backend_complexitycalculator_js",
-      "confidence_score": 1.0
+      "target": "backend_complexitycalculator_js"
     },
     {
       "relation": "method",
@@ -1791,9 +1942,9 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_complexitycalculator_complexitycalculator",
-      "target": "backend_complexitycalculator_complexitycalculator_constructor",
-      "confidence_score": 1.0
+      "target": "backend_complexitycalculator_complexitycalculator_constructor"
     },
     {
       "relation": "method",
@@ -1801,9 +1952,9 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_complexitycalculator_complexitycalculator",
-      "target": "backend_complexitycalculator_complexitycalculator_calculateforfile",
-      "confidence_score": 1.0
+      "target": "backend_complexitycalculator_complexitycalculator_calculateforfile"
     },
     {
       "relation": "method",
@@ -1811,9 +1962,9 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_complexitycalculator_complexitycalculator",
-      "target": "backend_complexitycalculator_complexitycalculator_calculateforfiles",
-      "confidence_score": 1.0
+      "target": "backend_complexitycalculator_complexitycalculator_calculateforfiles"
     },
     {
       "relation": "calls",
@@ -1822,9 +1973,9 @@
       "source_file": "backend/complexityCalculator.js",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_complexitycalculator_complexitycalculator_calculateforfiles",
-      "target": "backend_complexitycalculator_complexitycalculator_calculateforfile",
-      "confidence_score": 1.0
+      "target": "backend_complexitycalculator_complexitycalculator_calculateforfile"
     },
     {
       "relation": "contains",
@@ -1832,9 +1983,9 @@
       "source_file": "backend/couplingAnalyzer.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_couplinganalyzer_js",
-      "target": "backend_couplinganalyzer_couplinganalyzer",
-      "confidence_score": 1.0
+      "target": "backend_couplinganalyzer_couplinganalyzer"
     },
     {
       "relation": "imports_from",
@@ -1843,9 +1994,9 @@
       "source_file": "backend/routes.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_routes_js",
-      "target": "backend_couplinganalyzer_js",
-      "confidence_score": 1.0
+      "target": "backend_couplinganalyzer_js"
     },
     {
       "relation": "method",
@@ -1853,9 +2004,9 @@
       "source_file": "backend/couplingAnalyzer.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_couplinganalyzer_couplinganalyzer",
-      "target": "backend_couplinganalyzer_couplinganalyzer_findcouplingclusters",
-      "confidence_score": 1.0
+      "target": "backend_couplinganalyzer_couplinganalyzer_findcouplingclusters"
     },
     {
       "relation": "method",
@@ -1863,9 +2014,9 @@
       "source_file": "backend/couplingAnalyzer.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_couplinganalyzer_couplinganalyzer",
-      "target": "backend_couplinganalyzer_couplinganalyzer_generaterecommendations",
-      "confidence_score": 1.0
+      "target": "backend_couplinganalyzer_couplinganalyzer_generaterecommendations"
     },
     {
       "relation": "contains",
@@ -1873,9 +2024,9 @@
       "source_file": "backend/healthScorer.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_healthscorer_js",
-      "target": "backend_healthscorer_healthscorer",
-      "confidence_score": 1.0
+      "target": "backend_healthscorer_healthscorer"
     },
     {
       "relation": "imports_from",
@@ -1884,9 +2035,9 @@
       "source_file": "backend/routes.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_routes_js",
-      "target": "backend_healthscorer_js",
-      "confidence_score": 1.0
+      "target": "backend_healthscorer_js"
     },
     {
       "relation": "method",
@@ -1894,9 +2045,9 @@
       "source_file": "backend/healthScorer.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_healthscorer_healthscorer",
-      "target": "backend_healthscorer_healthscorer_constructor",
-      "confidence_score": 1.0
+      "target": "backend_healthscorer_healthscorer_constructor"
     },
     {
       "relation": "method",
@@ -1904,9 +2055,9 @@
       "source_file": "backend/healthScorer.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_healthscorer_healthscorer",
-      "target": "backend_healthscorer_healthscorer_calculatehealthscore",
-      "confidence_score": 1.0
+      "target": "backend_healthscorer_healthscorer_calculatehealthscore"
     },
     {
       "relation": "method",
@@ -1914,9 +2065,9 @@
       "source_file": "backend/healthScorer.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_healthscorer_healthscorer",
-      "target": "backend_healthscorer_healthscorer_findhotspots",
-      "confidence_score": 1.0
+      "target": "backend_healthscorer_healthscorer_findhotspots"
     },
     {
       "relation": "method",
@@ -1924,9 +2075,9 @@
       "source_file": "backend/healthScorer.js",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_healthscorer_healthscorer",
-      "target": "backend_healthscorer_healthscorer_generatesummary",
-      "confidence_score": 1.0
+      "target": "backend_healthscorer_healthscorer_generatesummary"
     },
     {
       "relation": "calls",
@@ -1935,9 +2086,9 @@
       "source_file": "backend/healthScorer.js",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_healthscorer_healthscorer_generatesummary",
-      "target": "backend_healthscorer_healthscorer_findhotspots",
-      "confidence_score": 1.0
+      "target": "backend_healthscorer_healthscorer_findhotspots"
     },
     {
       "relation": "contains",
@@ -1945,9 +2096,9 @@
       "source_file": "backend/gitAnalyzer.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_gitanalyzer_js",
-      "target": "backend_gitanalyzer_gitservice",
-      "confidence_score": 1.0
+      "target": "backend_gitanalyzer_gitservice"
     },
     {
       "relation": "contains",
@@ -1955,9 +2106,9 @@
       "source_file": "backend/gitAnalyzer.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_gitanalyzer_js",
-      "target": "backend_gitanalyzer_path",
-      "confidence_score": 1.0
+      "target": "backend_gitanalyzer_path"
     },
     {
       "relation": "contains",
@@ -1965,9 +2116,9 @@
       "source_file": "backend/gitAnalyzer.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_gitanalyzer_js",
-      "target": "backend_gitanalyzer_gitanalyzer",
-      "confidence_score": 1.0
+      "target": "backend_gitanalyzer_gitanalyzer"
     },
     {
       "relation": "imports_from",
@@ -1976,9 +2127,9 @@
       "source_file": "backend/routes.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_routes_js",
-      "target": "backend_gitanalyzer_js",
-      "confidence_score": 1.0
+      "target": "backend_gitanalyzer_js"
     },
     {
       "relation": "method",
@@ -1986,9 +2137,9 @@
       "source_file": "backend/gitAnalyzer.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_gitanalyzer_gitanalyzer",
-      "target": "backend_gitanalyzer_gitanalyzer_constructor",
-      "confidence_score": 1.0
+      "target": "backend_gitanalyzer_gitanalyzer_constructor"
     },
     {
       "relation": "method",
@@ -1996,9 +2147,9 @@
       "source_file": "backend/gitAnalyzer.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_gitanalyzer_gitanalyzer",
-      "target": "backend_gitanalyzer_gitanalyzer_isgitrepo",
-      "confidence_score": 1.0
+      "target": "backend_gitanalyzer_gitanalyzer_isgitrepo"
     },
     {
       "relation": "method",
@@ -2006,9 +2157,9 @@
       "source_file": "backend/gitAnalyzer.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_gitanalyzer_gitanalyzer",
-      "target": "backend_gitanalyzer_gitanalyzer_analyzechangefrequency",
-      "confidence_score": 1.0
+      "target": "backend_gitanalyzer_gitanalyzer_analyzechangefrequency"
     },
     {
       "relation": "method",
@@ -2016,9 +2167,9 @@
       "source_file": "backend/gitAnalyzer.js",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_gitanalyzer_gitanalyzer",
-      "target": "backend_gitanalyzer_gitanalyzer_analyzechangecoupling",
-      "confidence_score": 1.0
+      "target": "backend_gitanalyzer_gitanalyzer_analyzechangecoupling"
     },
     {
       "relation": "method",
@@ -2026,9 +2177,9 @@
       "source_file": "backend/gitAnalyzer.js",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_gitanalyzer_gitanalyzer",
-      "target": "backend_gitanalyzer_gitanalyzer_includefile",
-      "confidence_score": 1.0
+      "target": "backend_gitanalyzer_gitanalyzer_includefile"
     },
     {
       "relation": "contains",
@@ -2036,9 +2187,9 @@
       "source_file": "backend/routes.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_routes_js",
-      "target": "backend_routes_express",
-      "confidence_score": 1.0
+      "target": "backend_routes_express"
     },
     {
       "relation": "contains",
@@ -2046,9 +2197,9 @@
       "source_file": "backend/routes.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_routes_js",
-      "target": "backend_routes_gitanalyzer",
-      "confidence_score": 1.0
+      "target": "backend_routes_gitanalyzer"
     },
     {
       "relation": "contains",
@@ -2056,9 +2207,9 @@
       "source_file": "backend/routes.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_routes_js",
-      "target": "backend_routes_complexitycalculator",
-      "confidence_score": 1.0
+      "target": "backend_routes_complexitycalculator"
     },
     {
       "relation": "contains",
@@ -2066,9 +2217,9 @@
       "source_file": "backend/routes.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_routes_js",
-      "target": "backend_routes_healthscorer",
-      "confidence_score": 1.0
+      "target": "backend_routes_healthscorer"
     },
     {
       "relation": "contains",
@@ -2076,9 +2227,9 @@
       "source_file": "backend/routes.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_routes_js",
-      "target": "backend_routes_couplinganalyzer",
-      "confidence_score": 1.0
+      "target": "backend_routes_couplinganalyzer"
     },
     {
       "relation": "contains",
@@ -2086,9 +2237,9 @@
       "source_file": "backend/routes.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_routes_js",
-      "target": "backend_routes_mountroutes",
-      "confidence_score": 1.0
+      "target": "backend_routes_mountroutes"
     },
     {
       "relation": "contains",
@@ -2096,9 +2247,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_md",
-      "target": "lightsaber_readme_lightsaber_git_health_map_for_yodaman",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_lightsaber_git_health_map_for_yodaman"
     },
     {
       "relation": "contains",
@@ -2106,9 +2257,9 @@
       "source_file": "README.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_lightsaber_git_health_map_for_yodaman",
-      "target": "lightsaber_readme_yodaman_plugin_api",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_yodaman_plugin_api"
     },
     {
       "relation": "contains",
@@ -2116,9 +2267,9 @@
       "source_file": "README.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_lightsaber_git_health_map_for_yodaman",
-      "target": "lightsaber_readme_quick_install",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_quick_install"
     },
     {
       "relation": "contains",
@@ -2126,9 +2277,9 @@
       "source_file": "README.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_lightsaber_git_health_map_for_yodaman",
-      "target": "lightsaber_readme_usage_via_agent",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_usage_via_agent"
     },
     {
       "relation": "contains",
@@ -2136,9 +2287,9 @@
       "source_file": "README.md",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_lightsaber_git_health_map_for_yodaman",
-      "target": "lightsaber_readme_actions",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_actions"
     },
     {
       "relation": "contains",
@@ -2146,9 +2297,9 @@
       "source_file": "README.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_lightsaber_git_health_map_for_yodaman",
-      "target": "lightsaber_readme_health_score_formula",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_health_score_formula"
     },
     {
       "relation": "contains",
@@ -2156,9 +2307,9 @@
       "source_file": "README.md",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_lightsaber_git_health_map_for_yodaman",
-      "target": "lightsaber_readme_reuses_from_yodaman",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_reuses_from_yodaman"
     },
     {
       "relation": "contains",
@@ -2166,9 +2317,9 @@
       "source_file": "README.md",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_lightsaber_git_health_map_for_yodaman",
-      "target": "lightsaber_readme_reusing_from_yodaman",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_reusing_from_yodaman"
     },
     {
       "relation": "contains",
@@ -2176,9 +2327,9 @@
       "source_file": "README.md",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_lightsaber_git_health_map_for_yodaman",
-      "target": "lightsaber_readme_legacy_files",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_legacy_files"
     },
     {
       "relation": "contains",
@@ -2186,9 +2337,9 @@
       "source_file": "README.md",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_lightsaber_git_health_map_for_yodaman",
-      "target": "lightsaber_readme_license",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_license"
     },
     {
       "relation": "contains",
@@ -2196,9 +2347,9 @@
       "source_file": "README.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_yodaman_plugin_api",
-      "target": "lightsaber_readme_codeblock_1",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_codeblock_1"
     },
     {
       "relation": "contains",
@@ -2206,9 +2357,9 @@
       "source_file": "README.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_quick_install",
-      "target": "lightsaber_readme_codeblock_2",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_codeblock_2"
     },
     {
       "relation": "contains",
@@ -2216,9 +2367,9 @@
       "source_file": "README.md",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_usage_via_agent",
-      "target": "lightsaber_readme_codeblock_3",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_codeblock_3"
     },
     {
       "relation": "contains",
@@ -2226,9 +2377,9 @@
       "source_file": "README.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_usage_via_agent",
-      "target": "lightsaber_readme_codeblock_4",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_codeblock_4"
     },
     {
       "relation": "contains",
@@ -2236,9 +2387,9 @@
       "source_file": "README.md",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lightsaber_readme_reusing_from_yodaman",
-      "target": "lightsaber_readme_codeblock_5",
-      "confidence_score": 1.0
+      "target": "lightsaber_readme_codeblock_5"
     }
   ],
   "hyperedges": []

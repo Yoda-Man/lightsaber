@@ -1,11 +1,11 @@
 # Graph Report - lightsaber  (2026-06-10)
 
 ## Corpus Check
-- 15 files · ~4,655 words
+- 17 files · ~5,162 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 118 nodes · 116 edges · 13 communities (10 shown, 3 thin omitted)
+- 127 nodes · 123 edges · 13 communities (10 shown, 3 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -42,8 +42,8 @@
 ## Communities (13 total, 3 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.12
-Nodes (17): default, description, type, configSchema, commitLimit, enablePulseAnimation, excludePatterns, hotspotThreshold (+9 more)
+Cohesion: 0.10
+Nodes (21): default, description, type, configSchema, commitLimit, daysToAnalyze, enablePulseAnimation, excludePatterns (+13 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.12
@@ -54,8 +54,8 @@ Cohesion: 0.14
 Nodes (13): author, description, keywords, license, main, name, repository, type (+5 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.20
-Nodes (6): CouplingAnalyzer, ComplexityCalculator, CouplingAnalyzer, express, GitAnalyzer, HealthScorer
+Cohesion: 0.13
+Nodes (8): ComplexityCalculator, path, CouplingAnalyzer, ComplexityCalculator, CouplingAnalyzer, express, GitAnalyzer, HealthScorer
 
 ### Community 4 - "Community 4"
 Cohesion: 0.20
@@ -73,27 +73,29 @@ Nodes (3): mountRoutes(), onLoad(), path
 Cohesion: 0.43
 Nodes (6): calcComplexity(), calcCouplingClusters(), execute(), fs, healthScore(), path
 
-### Community 12 - "Community 12"
-Cohesion: 0.50
-Nodes (4): daysToAnalyze, default, description, type
+### Community 9 - "Community 9"
+Cohesion: 0.40
+Nodes (3): EXT_LANG, fs, path
 
 ## Knowledge Gaps
-- **58 isolated node(s):** `fs`, `path`, `path`, `fs`, `name` (+53 more)
+- **63 isolated node(s):** `fs`, `path`, `EXT_LANG`, `fs`, `path` (+58 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `configSchema` connect `Community 0` to `Community 4`, `Community 12`?**
-  _High betweenness centrality (0.053) - this node is a cross-community bridge._
+- **Why does `configSchema` connect `Community 0` to `Community 4`?**
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
 - **Why does `mountRoutes()` connect `Community 7` to `Community 3`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **What connects `fs`, `path`, `path` to the rest of the system?**
-  _58 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+- **What connects `fs`, `path`, `EXT_LANG` to the rest of the system?**
+  _63 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
+- **Should `Community 3` be split into smaller, more focused modules?**
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
