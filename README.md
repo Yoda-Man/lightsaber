@@ -50,9 +50,11 @@ curl -X POST http://localhost:3090/api/agent/task \
 | `analyze` | Top 10 hotspots, change frequency, complexity scores |
 | `find-hotspots` | All files with health score < 40, summary stats |
 | `find-todos` | TODO/FIXME/HACK count per file |
-| `test-coverage` | Ratio of test files to source files |
+| `test-coverage` | Percentage of source files reached by a test (knowledge-graph based since v0.3.8), with untested files listed by dependency count |
 | `coupling` | Change coupling edges + clusters |
 | `report` | Full JSON dump (hotspots, coupling, clusters, scores) |
+
+> **v0.3.8 note**: `test-coverage` previously returned the ratio of test files to source files (one large test file could inflate it). It now resolves coverage through the knowledge graph and lists untested files ordered by how many other files depend on them. The `ratio` field is retained for existing consumers. Scoring factors `testCoverage` and `todoCount` are now per-file and real — they were dead code prior to v0.3.8.
 
 ## Health Score Formula
 
@@ -60,8 +62,8 @@ curl -X POST http://localhost:3090/api/agent/task \
 
 - ChangePenalty: min(40, commits_90d / max_commits × 40)
 - ComplexityPenalty: min(30, cyclomatic / 100 × 30)
-- TestPenalty: coverage < 50% ? 20 : 0
-- TodoPenalty: min(10, todo_count / 10 × 5)
+- TestPenalty: coverage < 50% ? 20 : 0  *(coverage resolved from knowledge graph edges per file)*
+- TodoPenalty: min(10, todo_count / 10 × 5)  *(TODO counts from actual file scan)*
 
 | Score | Status |
 |-------|--------|
