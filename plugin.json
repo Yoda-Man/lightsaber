@@ -2,9 +2,9 @@
   "name": "lightsaber",
   "displayName": "Lightsaber — Git Health Map",
   "description": "Find hotspots in your codebase using Git history, complexity, and change coupling. Your commit history reveals where your code actually hurts.",
-  "version": "1.0.0",
+  "version": "0.3.0",
   "author": "YodaMan Community",
-  "minYodaManVersion": "1.0.0",
+  "minYodaManVersion": "0.3.0",
   "entry": "main.js",
   "permissions": ["git:read", "filesystem:read", "audit:write"],
   "uiExtensions": [
