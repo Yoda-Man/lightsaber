@@ -7,5 +7,6 @@
   "license": "MIT",
   "keywords": ["yodaman", "plugin", "git", "code-health", "hotspots", "technical-debt"],
   "repository": { "type": "git", "url": "https://github.com/Yoda-Man/lightsaber.git" },
+  "engines": { "node": ">=24" },
   "yodaman": { "minVersion": "0.2.0", "type": "tool" }
 }
