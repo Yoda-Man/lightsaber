@@ -1,23 +1,27 @@
 # Change Coupling Specification
 
 ## Purpose
-Change coupling finds files that change in the same commits. It covers the `coupling` action and the `coupling` and `clusters` fields of `report`, both in `lightsaber.js`. The two actions run the same steps through copied code, and git access goes through YodaMan's `gitService`.
+Change coupling finds files that change in the same commits. It covers the `coupling` action and the `coupling` and `clusters` fields of `report`, both in `lightsaber.js`. The two actions share one code path, and git access goes through YodaMan's `gitService`.
 
 ## Requirements
 
 ### Requirement: Commit sample
-The `coupling` and `report` actions SHALL call `gitService.getCommitHistory(workspacePath, null, Math.min(commitLimit, 200))`. gitService runs `git log --max-count=<n> --date=iso-strict --pretty=format:%H%x09%an%x09%ad%x09%s` and one `git show --name-only` per commit. A failure SHALL give an empty sample.
+The `coupling` and `report` actions SHALL call `gitService.getCommitHistory(workspacePath, null, Math.min(commitLimit, 100))` and keep the commits dated inside the `daysToAnalyze` window. A commit with no date SHALL be kept. A failure SHALL give an empty sample.
 
 #### Scenario: Default limit
 - **WHEN** `commitLimit` is not passed
-- **THEN** up to 200 commits are fetched
+- **THEN** up to 100 commits are fetched
 
 #### Scenario: Zero limit
 - **WHEN** `commitLimit` is 0
 - **THEN** gitService reads 0 as missing and fetches up to 100 commits
 
+#### Scenario: Old commit
+- **WHEN** `daysToAnalyze` is 7 and the sample has commits from 2 and 20 days ago
+- **THEN** only the commit from 2 days ago is diffed
+
 ### Requirement: Diffed commits
-Only the first 100 commits of the sample SHALL be diffed, each with `gitService.getCommitDiff`, which runs `git show --numstat --format= --no-renames --end-of-options <hash>`. A commit whose diff throws MUST be skipped without failing the action.
+Every commit of the sample SHALL be diffed with `gitService.getCommitDiff`. A commit whose diff throws MUST be skipped without failing the action.
 
 #### Scenario: Bad commit
 - **WHEN** one commit cannot be diffed, for example in a shallow clone
@@ -31,11 +35,11 @@ For each diffed commit the plugin SHALL keep the changed paths that pass the fil
 - **THEN** the pairs `a.js|b.js`, `a.js|c.js` and `b.js|c.js` each gain 1
 
 ### Requirement: Coupling strength
-Each pair SHALL get `strength = coChangeCount / sampleSize * 100`, unrounded, where `sampleSize` is the full commit sample, up to 200, not the 100 commits diffed.
+Each pair SHALL get `strength = coChangeCount / diffed * 100`, unrounded, where `diffed` is the number of commits diffed without error, at least 1.
 
 #### Scenario: Large history
-- **WHEN** the sample has 200 commits and two files change together in all 100 diffed commits
-- **THEN** their strength is 50, not 100
+- **WHEN** 200 commits exist and every diffed commit changes the same two files
+- **THEN** their strength is 100
 
 ### Requirement: Edge list
 The edges SHALL be `{ file1, file2, coChangeCount, strength }`, sorted by strength, highest first, and cut to the first 100.

@@ -1,10 +1,21 @@
 // routes.js — Lightsaber API routes mounting on yodaman's existing Express router
 // Follows RestController.js pattern, reuses gitService, auditLog, logger from yodaman.
-const express = require('express');
+const path = require('path');
+const { execFile } = require('child_process');
 const GitAnalyzer = require('./gitAnalyzer');
 const ComplexityCalculator = require('./complexityCalculator');
 const HealthScorer = require('./healthScorer');
 const CouplingAnalyzer = require('./couplingAnalyzer');
+
+// The first `limit` lines a program prints, with arguments as an array, never a shell.
+// Resolves on any exit code: grep exits 1 on no match. Same as outputLines in lightsaber.js.
+function outputLines(command, args, limit) {
+  return new Promise((resolve) => {
+    execFile(command, args, { maxBuffer: 64 * 1024 * 1024 }, (_err, stdout = '') => {
+      resolve(String(stdout).split('\n').filter(Boolean).slice(0, limit));
+    });
+  });
+}
 
 function mountRoutes(router, deps) {
   const { gitService, auditLog, logger } = deps;
@@ -12,7 +23,7 @@ function mountRoutes(router, deps) {
   // POST /api/lightsaber/check-git
   router.post('/api/lightsaber/check-git', async (req, res) => {
     try {
-      const ga = new GitAnalyzer(req.body.workspacePath);
+      const ga = new GitAnalyzer(req.body.workspacePath, {}, gitService);
       res.json({ isRepo: await ga.isGitRepo() });
     } catch (e) { res.status(400).json({ error: e.message }); }
   });
@@ -20,7 +31,7 @@ function mountRoutes(router, deps) {
   // POST /api/lightsaber/analyze-git — uses existing gitService.getHeatmapData
   router.post('/api/lightsaber/analyze-git', async (req, res) => {
     try {
-      const ga = new GitAnalyzer(req.body.workspacePath, req.body);
+      const ga = new GitAnalyzer(req.body.workspacePath, req.body, gitService);
       const commits = await gitService.getCommitHistory(req.body.workspacePath, null, req.body.commitLimit || 500);
       const [changeData, coupling] = await Promise.all([
         ga.analyzeChangeFrequency(commits),
@@ -59,11 +70,13 @@ function mountRoutes(router, deps) {
   // POST /api/lightsaber/find-todos
   router.post('/api/lightsaber/find-todos', async (req, res) => {
     try {
-      const { exec } = require('child_process');
-      const { promisify } = require('util');
-      const execP = promisify(exec);
-      const { stdout } = await execP(`grep -rn "TODO\\|FIXME\\|HACK" --include="*.js" --include="*.ts" --include="*.jsx" --include="*.tsx" "${req.body.workspacePath}" 2>/dev/null | head -500`);
-      const lines = stdout.split('\n').filter(Boolean);
+      const lines = await outputLines('grep', [
+        '-rn', '-e', 'TODO', '-e', 'FIXME', '-e', 'HACK',
+        '--include=*.js', '--include=*.ts', '--include=*.jsx', '--include=*.tsx',
+        '--exclude-dir=node_modules', '--exclude-dir=dist', '--exclude-dir=build', '--exclude-dir=.git',
+        '--exclude-dir=release', '--exclude-dir=coverage',
+        '--', path.resolve(req.body.workspacePath)
+      ], 500);
       const byFile = {};
       for (const l of lines) { const f = l.split(':')[0]; byFile[f] = (byFile[f]||0)+1; }
       res.json({ todos: lines, byFile });
@@ -73,13 +86,9 @@ function mountRoutes(router, deps) {
   // POST /api/lightsaber/test-coverage
   router.post('/api/lightsaber/test-coverage', async (req, res) => {
     try {
-      const { exec } = require('child_process');
-      const { promisify } = require('util');
-      const execP = promisify(exec);
-      const { stdout } = await execP(`find "${req.body.workspacePath}" -name "*.test.*" -o -name "*.spec.*" 2>/dev/null | head -200`);
-      const testFiles = stdout.split('\n').filter(Boolean);
-      const { stdout: srcStdout } = await execP(`find "${req.body.workspacePath}" -name "*.js" -not -name "*.test.*" -not -name "*.spec.*" -not -path "*/node_modules/*" 2>/dev/null | head -500`);
-      const srcFiles = srcStdout.split('\n').filter(Boolean);
+      const ws = path.resolve(req.body.workspacePath);
+      const testFiles = await outputLines('find', [ws, '(', '-name', '*.test.*', '-o', '-name', '*.spec.*', ')', '-not', '-path', '*/node_modules/*'], 200);
+      const srcFiles = await outputLines('find', [ws, '-name', '*.js', '-not', '-name', '*.test.*', '-not', '-name', '*.spec.*', '-not', '-path', '*/node_modules/*'], 500);
       const ratio = srcFiles.length > 0 ? Math.round(testFiles.length / srcFiles.length * 100) : 0;
       res.json({ ratio, testFiles, sourceFiles: srcFiles, uncoveredFiles: [] });
     } catch (e) { res.json({ ratio: 0, testFiles: [], sourceFiles: [], uncoveredFiles: [] }); }
@@ -89,7 +98,7 @@ function mountRoutes(router, deps) {
   router.post('/api/lightsaber/find-hotspots', async (req, res) => {
     try {
       const scorer = new HealthScorer(req.body);
-      const ga = new GitAnalyzer(req.body.workspacePath, req.body);
+      const ga = new GitAnalyzer(req.body.workspacePath, req.body, gitService);
       const commits = await gitService.getCommitHistory(req.body.workspacePath, null, 200);
       const changeData = await ga.analyzeChangeFrequency(commits);
       const cc = new ComplexityCalculator(req.body.workspacePath);
@@ -111,7 +120,7 @@ function mountRoutes(router, deps) {
   // POST /api/lightsaber/coupling-clusters
   router.post('/api/lightsaber/coupling-clusters', async (req, res) => {
     try {
-      const ga = new GitAnalyzer(req.body.workspacePath, req.body);
+      const ga = new GitAnalyzer(req.body.workspacePath, req.body, gitService);
       const commits = await gitService.getCommitHistory(req.body.workspacePath, null, 200);
       const coupling = await ga.analyzeChangeCoupling(commits);
       const ca = new CouplingAnalyzer();
@@ -141,7 +150,7 @@ function mountRoutes(router, deps) {
   // POST /api/lightsaber/full-report
   router.post('/api/lightsaber/full-report', async (req, res) => {
     try {
-      const ga = new GitAnalyzer(req.body.workspacePath, req.body);
+      const ga = new GitAnalyzer(req.body.workspacePath, req.body, gitService);
       const commits = await gitService.getCommitHistory(req.body.workspacePath, null, 500);
       const [changeData, coupling] = await Promise.all([
         ga.analyzeChangeFrequency(commits), ga.analyzeChangeCoupling(commits)
