@@ -1,0 +1,47 @@
+schema: spec-driven
+
+# Constraints an agent cannot read from the code
+context: |
+  Lightsaber is a single-file YodaMan tool plugin (git hotspots, complexity, change coupling). YodaMan core
+  ships a copy as core/plugins/lightsaber.js: a fix here must be ported there and the reverse, or the copies drift.
+  Plugins never build shell strings from parameters: run git and other tools with argument arrays.
+  Privacy first, local only: no cloud LLM, API key or telemetry, and no workspace data leaves the machine.
+  All work and maintenance is driven from OpenSpec: every feature, fix or maintenance task starts as a change
+  (openspec-propose or openspec-new-change), is built from its tasks.md (openspec-apply-change), checked (openspec-verify-change), and archived
+  (openspec-archive-change) so openspec/specs always describes what the code does today.
+  Every fix ships with a regression test that fails without it, and a guard test when the bug is one of a class.
+  Every dependency stays on its latest release, majors included, on Node 24 or later.
+  Lean code: delete what is unused and reuse one shared helper instead of copies.
+  Documentation must be 100% accurate: verify every path, flag and step against the code.
+  Write in plain, short sentences.
+
+# Project context (optional)
+# Add only constraints that should guide OpenSpec artifacts and workflows.
+# Include constraints an agent cannot infer by reading the code.
+# Keep general project documentation and discoverable codebase facts out.
+# Example:
+#   context: |
+#     Designs and tasks must cover Windows, macOS, and Linux
+#     Write all artifacts in Spanish
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always state what is out of scope
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing
