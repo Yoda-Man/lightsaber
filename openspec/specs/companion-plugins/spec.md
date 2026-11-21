@@ -34,11 +34,11 @@ The unused finders SHALL treat any file named `index.js`, `index.ts`, `main.js`,
 - **THEN** it is not reported as unused
 
 ### Requirement: Reference detection
-For each file the finder SHALL search that file's own content for a quoted string ending in that file's own base name, with an optional `./` or `../` prefix. A relative match SHALL mark the existing `<resolved><ext>` or `<resolved>/index<ext>`. The base name is not regex-escaped.
+For each file the finder SHALL find every quoted string that starts with `./` or `../`, resolve it against that file's folder, and mark the scanned file whose path is the resolved path, `<resolved><ext>` or `<resolved>/index<ext>`.
 
 #### Scenario: Imported by another file
-- **WHEN** `index.js` has `require('./src/util')` and `src/util.js` never names itself
-- **THEN** `src/util.js` is reported unused
+- **WHEN** `index.js` has `require('./util')` and `import { x } from './lib'`, and `orphan.js` is imported by nothing
+- **THEN** only `orphan.js` is reported unused
 
 #### Scenario: Names itself
 - **WHEN** `src/self.js` contains `require('./self')`
@@ -64,3 +64,10 @@ CodeTrooper SHALL name each file's language from its extension through a fixed m
 #### Scenario: Languages list
 - **WHEN** a folder holds three `.js` files of one line each
 - **THEN** `languages` is `[{ lang: 'JavaScript', files: 3, lines: 3 }]`, sorted by lines, highest first
+
+### Requirement: Standalone companions
+The companion plugins SHALL load with Node built-ins only. `Droid-Sweep.js` here SHALL NOT match YodaMan core's `plugins/Droid-Sweep.js`, which asks YodaMan's knowledge graph first; only core's text-scan import loop is shared.
+
+#### Scenario: Load outside YodaMan
+- **WHEN** a host requires `Droid-Sweep.js` from this repository
+- **THEN** it loads without any YodaMan module

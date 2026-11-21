@@ -15,9 +15,10 @@ class ComplexityCalculator {
       let maxIndent = 0;
       for (const l of lines) { const indent = l.match(/^\s*/)[0].length; maxIndent = Math.max(maxIndent, Math.floor(indent/2)); }
 
-      const decisions = ['if','else if','for','while','case','catch','&&','||','?'];
-      let complex = 1;
-      for (const d of decisions) { const m = content.match(new RegExp(`\\b${d}\\b`,'g')); if (m) complex += m.length; }
+      // As lightsaber.js, plus `else if`. Built as `\b?\b`, the `?` threw, so every file scored zero.
+      const complex = 1 + (content.match(/\b(?:if|for|while|case|catch)\b/g) || []).length
+        + (content.match(/\belse if\b/g) || []).length
+        + (content.match(/&&|\|\||(?<!\?)\?(?![.?])/g) || []).length;
       const cc = Math.min(complex, 200);
       return { loc:nonEmpty, nestingDepth:maxIndent, cyclomaticComplexity:cc, complexityScore:Math.min(100,(cc/200)*100) };
     } catch (e) { return { loc:0, nestingDepth:0, cyclomaticComplexity:0, complexityScore:0, error:e.message }; }

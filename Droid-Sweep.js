@@ -26,15 +26,13 @@ module.exports = {
     const refd = new Set(), rootFiles = new Set(['index.js','index.ts','main.js','main.ts','app.js','app.tsx','index.jsx','index.tsx']);
     for(const f of allFiles) if(rootFiles.has(path.basename(f))) refd.add(f);
 
-    for(const [fp, c] of Object.entries(cm)) {
-      const base = path.basename(fp).replace(path.extname(fp),'');
-      const rx = new RegExp(`['"\`](\\.\\.?/.*?)?${base}['"\`]`,'g'); let m;
-      while((m=rx.exec(c))!==null) {
-        const ip = m[1] ? m[1]+base : base;
-        if(ip.startsWith('.')) {
-          const d = path.dirname(fp), r = path.resolve(d, ip);
-          for(const e of exts) { if(fs.existsSync(r+e)) refd.add(r+e); if(fs.existsSync(path.join(r,`index${e}`))) refd.add(path.join(r,`index${e}`)); }
-        }
+    // Each file's own relative imports mark their targets as used (core's loop).
+    // It used to search each file for its OWN name, so imported files were reported unused.
+    for (const [filePath, content] of Object.entries(cm)) {
+      for (const [, spec] of content.matchAll(/['"`](\.\.?\/[^'"`\s]*)['"`]/g)) {
+        const resolved = path.resolve(path.dirname(filePath), spec);
+        const candidates = [resolved, ...[...exts].flatMap(ext => [resolved + ext, path.join(resolved, `index${ext}`)])];
+        for (const candidate of candidates) if (candidate in cm) refd.add(candidate);
       }
     }
 
